@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ee3bd31bb8","applicationID":"6527651","transactionName":"ew1WTBAND1tdShtUWUoFV2cGBxVeS10bQFNLEVFXDBFMWV1P","queueTime":2,"applicationTime":44,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+	<title>Sign In</title>
+	
+
+	<link rel="stylesheet" media="all" href="https://cdn.visage.co/assets/application-7f884204b79d623b5f330f828c9168f2.css" />
+
+		<link rel="stylesheet" media="screen" href="https://cdn.visage.co/assets/bundles/devise-bundle-a9cda305b10add2192fbf76f1641f0b2.css" />
+
+	<script src="https://cdn.visage.co/assets/bundles/application-991864364e71c9dd27e578e894ca76ce.js"></script>
+	<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="93i4ERqB/c4/4UiYcn6ItSRKfagchZQ2yBHZXKGi61WQwx+0Qn88pfa3JDO+PK0ysq0YNsGA65GTrhISHWjnxw==" />
+	<link rel="shortcut icon" type="image/x-icon" href="https://cdn.visage.co/assets/favicon-f0511480ef9ef78b3786a4c11600fca8.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="https://cdn.visage.co/assets/favicon-cb174d69c558bf3d03a0ed913eac571e.png" />
+	
+
+	<script type="text/javascript">
+	$(function() {
+		!function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+			gg.Tracking = gg.Tracking || {};
+			gg.Tracking.integrations = {"All":false,"Google Analytics":true,"HubSpot":true,"KISSmetrics":true};
+
+			var options = gg.Tracking.getOptions();
+
+			analytics.load("Q9kkuqWlgTgy6Fq5JbflC0icKPkxvtvw");
+
+			analytics.page('product', 'sessions-new', {}, options);
+
+		}}();
+	});
+</script>
+
+
+	
+</head>
+<body data-controller="sessions" data-action="new" class="sessions-new">
+	
+<section id="header" class="loading" data-bind="css: { loading: false }">
+	<a class="logo icon-visage" href="/"></a>
+	
+</section>
+
+
+	
+<div id="modals" class="loading" data-bind="css: { loading: false }">
+	<div class="modal-overlay active">
+		<div class="modal-fill templates">
+			<div class="home-index blurry">
+<section id="header">
+	<nav class="nav-right">
+		<div class="header-menu">
+			<div class="menu-label">
+				<div class="menu-icon icon-menu-v2"></div>
+			</div>
+		</div>
+	</nav>
+</section>
+<div id="wrapper">
+	<section id="creation">
+		<div class="carousel-wrapper">
+			<div class="carousel-viewport">
+				<div class="carousel-container">
+					<nav class="navigation-header">
+						<div class="navigation-heading">
+							<h3>Create New</h3>
+						</div>
+					</nav>
+					<ul class="create-carousel carousel-parent" style="width:1800px;left:0px;height:220px;">
+						<li class="grid-item item-graphic item-format format-ebook carousel-child carousel-first">
+							<article class="container">
+								<div class="display">
+									<div class="format-name">
+										<p><strong>eBook</strong></p>
+									</div>
+									<div class="format-icon">
+										<svg viewBox="0 0 144 144">
+											<path d="M119.5,13.1c0-6.1-5-11.1-11.1-11.1H35.6c-6.1,0-11.1,5-11.1,11.1v97.8c0,6.1,5,11.1,11.1,11.1h72.8c6.1,0,11.1-5,11.1-11.1 V13.1z M91.2,47.1c-0.9,0-1.7,0.7-1.7,1.7v9.5l-10,6V22h21.7v42.3l-8.3-6.1v-9.4C92.8,47.9,92.1,47.1,91.2,47.1z M76.2,33.7H42.2 c-0.9,0-1.7,0.7-1.7,1.7c0,0.9,0.7,1.7,1.7,1.7h33.9v11.7H42.2c-0.9,0-1.7,0.7-1.7,1.7c0,0.9,0.7,1.7,1.7,1.7h33.9v12.4 c0-0.4-0.4-0.7-1-0.7H42.2c-0.9,0-1.7,0.7-1.7,1.7c0,0.9,0.7,1.7,1.7,1.7h32.9c0.6,0,1-0.3,1-0.8v1.2c0,0.6,0.5,1.2,1.1,1.5 c0.2,0.1,0.6,0.2,0.9,0.2c0.3,0,0.7-0.1,1-0.3l11.4-7.7l11.5,7.7c0.5,0.3,1.1,0.4,1.7,0.1c0.5-0.3,0.8-0.9,0.8-1.5V22h10v-5h-85 v-3.2c0-3.4,3-6.8,6.3-6.8h72.9c3.4,0,5.8,3.5,5.8,6.8V92h-85V22h46.7V33.7z M29.5,110.8V97h85v13.8c0,3.4-2.4,6.2-5.8,6.2H35.8 C32.5,117,29.5,114.2,29.5,110.8z M40.6,80.3c0-0.9,0.7-1.7,1.7-1.7H90c0.9,0,1.7,0.7,1.7,1.7c0,0.9-0.7,1.7-1.7,1.7H42.2 C41.3,82,40.6,81.3,40.6,80.3z M77.1,109.5c0,2.6-2.1,4.7-4.7,4.7c-2.6,0-4.7-2.1-4.7-4.7s2.1-4.7,4.7-4.7 C75,104.9,77.1,107,77.1,109.5z"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="display multi-page-1"></div>
+								<div class="display multi-page-2"></div>
+							</article>
+						</li>
+						<li class="grid-item item-graphic item-format format-report carousel-child active">
+							<article class="container">
+								<div class="display">
+									<div class="format-name">
+										<p><strong>Report</strong></p>
+									</div>
+									<div class="format-icon">
+										<svg viewBox="0 0 144 144">
+											<path d="M130.2,27.9V17.6H82.6c-4.2,0-7.9,2-10.3,5.1c-2.4-3.1-6.1-5.1-10.3-5.1H15.3v10.4H3.4v88.5H66l7.2-5.9l6.8,5.9h60.6V27.9 H130.2z M74.8,30c0-4.2,3.6-7.3,7.8-7.3h42.4v76.6H82.6c-4.2,0-7.8-3.3-7.8-7.5V30z M21,22.7h41.1c4.2,0,7.1,3.1,7.1,7.3v61.8 c0,4.2-2.8,7.5-7.1,7.5H21V22.7z M135.4,111.3H82.8l-9.6-7.4l-9.8,7.4H8.6V33.1h6.7v71.4h46.8c4.2,0,7.9-2,10.3-5.1 c2.4,3.1,6.1,5.1,10.3,5.1h47.6V33.1h5.2V111.3z M31.4,59.5h-3.6V47.1h3.6V59.5z M41.7,59.5h-3.6V36.7h3.6V59.5z M52.1,59.5h-3.6 V33.1h3.6V59.5z M62.4,59.5h-3.6V47.1h3.6V59.5z M26.2,67.8h29.5v3.6H26.2V67.8z M38.1,81.8H26.2v-3.6h11.9V81.8z M26.2,89h19.2v3.1 H26.2V89z M79.8,86.9c0-3.2,2.6-5.8,5.8-5.8c3.2,0,5.8,2.6,5.8,5.8c0,3.2-2.6,5.8-5.8,5.8C82.4,92.7,79.8,90.1,79.8,86.9z  M106.5,86.9c0,3.2-2.6,5.8-5.8,5.8c-3.2,0-5.8-2.6-5.8-5.8c0-3.2,2.6-5.8,5.8-5.8C103.9,81.1,106.5,83.7,106.5,86.9z M115.8,81.1 c3.2,0,5.8,2.6,5.8,5.8c0,3.2-2.6,5.8-5.8,5.8c-3.2,0-5.8-2.6-5.8-5.8C110,83.7,112.6,81.1,115.8,81.1z M99.1,40.9h-1.5 c-8,0-14.5,7.2-14.5,14.3c0,8,6.5,14.3,14.5,14.3c8,0,14.5-6.1,14.5-14.1v-0.8h-13V40.9z M109.7,57c-0.6,5.9-5.8,10.2-12.1,10.2 c-6.7,0-12-5-12-11.7c0-6.3,5.2-11.6,11.1-12.2V57H109.7z M104.6,33.7h-0.8v16.2h15.3v-1.5C119.2,40.5,112.6,33.7,104.6,33.7z  M106.2,47.6V36.4c5.9,0.6,9.9,5.3,10.5,11.2H106.2z M99.1,40.9h-1.5c-8,0-14.5,7.2-14.5,14.3c0,8,6.5,14.3,14.5,14.3 c8,0,14.5-6.1,14.5-14.1v-0.8h-13V40.9z M109.7,57c-0.6,5.9-5.8,10.2-12.1,10.2c-6.7,0-12-5-12-11.7c0-6.3,5.2-11.6,11.1-12.2V57 H109.7z M104.6,33.7h-0.8v16.2h15.3v-1.5C119.2,40.5,112.6,33.7,104.6,33.7z M106.2,47.6V36.4c5.9,0.6,9.9,5.3,10.5,11.2H106.2z"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="display multi-page-1"></div>
+								<div class="display multi-page-2"></div>
+							</article>
+						</li>
+						<li class="grid-item item-graphic item-format format-presentation carousel-child">
+							<article class="container">
+								<div class="display">
+									<div class="format-name">
+										<p><strong>Presentation</strong></p>
+									</div>
+									<div class="format-icon">
+										<svg viewBox="0 0 144 144">
+											<path d="M105.1,112.5l15.9,15.6c0.9,0.9,2.3,1.4,3.6,1.4c1.4,0,2.9-0.6,4.1-1.7c1-1,1.6-2.3,1.7-3.6c0.1-1.4-0.7-2.8-1.6-3.8 L105.1,97V39.9h9.2V24.6H67V21c1.5-0.9,3.7-3,3.7-5.5c0-3.3-2.7-6-6-6c-3.3,0-6,2.7-6,6c0,2.5,2.2,4.6,3.7,5.5v3.7H13.6v15.3h10.7 v83.9h80.8V112.5z M64.7,12.6c1.6,0,2.9,1.3,2.9,2.9c0,1.6-1.3,2.9-2.9,2.9c-1.6,0-2.9-1.3-2.9-2.9C61.7,13.9,63,12.6,64.7,12.6z  M18.2,35.3v-6.1h91.5v6.1h-4H23.6H18.2z M28.8,119.2V39.9h71.7v52.5L79.7,71.3c-2-2-5.1-1.8-7.3,0.3c-2.1,2.1-2.5,5.5-0.5,7.4 l28.6,28.8v11.3H28.8z M62.5,91.4l-2.2-2.2l5.9-5.9l2.2,2.2L62.5,91.4z M63.7,77.4l0.8,2.9l-8.1,2.2l-0.8-2.9L63.7,77.4z M63.7,73.9 l-8.1-2.2l0.8-2.9l8.1,2.2L63.7,73.9z M66.3,68l-5.9-5.9l2.2-2.2l5.9,5.9L66.3,68z M71.4,64.1L69.2,56l2.9-0.8l2.2,8.1L71.4,64.1z  M80.7,64.1l-2.9-0.8l2.2-8.1l2.9,0.8L80.7,64.1z M85.8,68l-2.2-2.2l5.9-5.9l2.2,2.2L85.8,68z M87.5,71l8.1-2.2l0.8,2.9l-8.1,2.2 L87.5,71z M72.2,96l-2.9-0.8l2.2-8.1l2.9,0.8L72.2,96z M50.2,50.6H34.9v-3.1h15.3V50.6z M42.6,64.3h-7.6v-3.1h7.6V64.3z M42.6,71.9 h-7.6v-3.1h7.6V71.9z M42.6,78h-7.6V75h7.6V78z M42.6,85.6h-7.6v-3.1h7.6V85.6z M34.9,105.5h45.8v3.1H34.9V105.5z"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="display multi-page-1"></div>
+								<div class="display multi-page-2"></div>
+							</article>
+						</li>
+						<li class="grid-item item-graphic item-format format-slideshow carousel-child">
+							<article class="container">
+								<div class="display">
+									<div class="format-name">
+										<p><strong>Slideshow</strong></p>
+									</div>
+									<div class="format-icon">
+										<svg viewBox="0 0 144 144">
+											<path d="M132,35.2v-10h-10v-10H2v93.5h10v10h10v10h120V35.2H132z M6.7,20h110.6v84.2H6.7V20z M16.7,108.8H122V30h5.3v84.2H16.7 V108.8z M137.3,124.1H26.7v-5.4H132V40h5.3V124.1z M98.8,54.6C98.2,41.5,87.3,31,74,31c-4.2,0-8.2,1.1-11.7,2.9 C58.8,32,54.8,31,50.6,31c-13.3,0-24.2,10.5-25,23.6c-3.6,0.8-6.3,4-6.3,7.8c-0.1,3.9,2.7,7.1,6.3,7.8c0.7,6.7,6.4,11.9,13.2,11.9 c4.7,0,8.8-2.5,11.2-6.2c3.1,10.3,12.6,17.9,23.9,17.9c13.3,0,24.2-10.5,24.9-23.6c3.7-0.7,6.5-3.9,6.5-7.8 C105.3,58.5,102.5,55.3,98.8,54.6z M22.4,62.5c-0.1-2.7,2.1-4.8,4.8-4.8s4.8,2.2,4.8,4.8c0,2.7-2.2,4.8-4.8,4.8 C24.5,67.2,22.4,65,22.4,62.5z M38.9,79c-5.1,0-9.4-3.8-10.1-8.8c3.6-0.8,6.3-4,6.3-7.8c0-3.9-2.8-7.1-6.5-7.8 c0.8-11.4,10.3-20.5,21.9-20.5c3.1,0,6,0.6,8.6,1.8C53.3,40.2,49.4,47,49,54.6c-3.6,0.7-6.3,4-6.3,7.8c0,3.8,2.7,7,6.3,7.8 C48.3,75.2,44.1,79,38.9,79z M45.8,62.5c0-2.7,2.1-4.8,4.8-4.8c2.7,0,4.8,2.2,4.8,4.8c0,2.7-2.2,4.8-4.8,4.8 C48,67.2,45.8,65,45.8,62.5z M74,90.8c-11.6,0-21.1-9.1-21.8-20.5c3.6-0.7,6.4-4,6.4-7.8c0-3.9-2.8-7.1-6.4-7.8 c0.5-7.2,4.4-13.4,10.1-17.1c5.7,3.7,9.6,9.9,10.1,17.1c-3.6,0.8-6.3,4-6.3,7.8c0,3.9,2.8,7.1,6.4,7.8c0.7,6.7,6.4,11.9,13.2,11.9 c2.6,0,5-0.7,7-2C88.9,86.5,81.9,90.8,74,90.8z M74,57.6c2.7,0,4.8,2.2,4.8,4.8c0,2.7-2.2,4.8-4.8,4.8c-2.6,0-4.8-2.2-4.8-4.8 C69.2,59.8,71.3,57.6,74,57.6z M85.7,79c-5.1,0-9.4-3.8-10.1-8.8c3.6-0.8,6.3-4,6.3-7.8c0-3.9-2.8-7.1-6.5-7.8 c-0.4-7.7-4.3-14.4-10.1-18.7c2.7-1.2,5.6-1.8,8.7-1.8c11.6,0,21.1,9.1,21.8,20.5c-3.6,0.8-6.3,4-6.3,7.8c0,3.8,2.7,7,6.3,7.8 C95.1,75.2,90.9,79,85.7,79z M97.5,67.2c-2.7,0-4.8-2.2-4.8-4.8c0-2.7,2.2-4.8,4.8-4.8c2.6,0,4.8,2.1,4.8,4.8 C102.3,65.1,100.1,67.2,97.5,67.2z"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="display multi-page-1"></div>
+								<div class="display multi-page-2"></div>
+							</article>
+						</li>
+						<li class="grid-item item-graphic item-format format-social-landscape carousel-child">
+							<article class="container">
+								<div class="display">
+									<div class="format-name">
+										<p><strong>Social</strong> Landscape</p>
+									</div>
+									<div class="format-icon">
+										<svg viewBox="0 0 144 144">
+											<path d="M12,25v99h120V25H12z M39.9,102.6l11-2l14,15.1c0.3,0.3,0.7,0.5,1.1,0.5c0.1,0,0.2,0,0.3,0c0.5-0.1,1-0.4,1.2-0.9l6.7-15.1 l8.9,3.1L96.5,120H25.7L39.9,102.6z M42.9,98.8L61.6,76l18,22.6l-5.7-1.9c-0.8-0.3-1.6,0.1-1.9,0.8l-6.4,14.3l-13-14 c-0.4-0.4-0.9-0.6-1.4-0.5L42.9,98.8z M128,120h-25.5l-39-49.1C63,70.4,62.3,70,61.6,70c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.8,0.9 L19.7,120H16V29h112V120z M88.9,65.3l2.2,2.2l-4.9,4.9l-2.2-2.2L88.9,65.3z M111.4,47.2l-2.2-2.2l4.9-4.9l2.2,2.2L111.4,47.2z  M111.4,65.3l4.9,4.9l-2.2,2.2l-4.9-4.9L111.4,65.3z M88.9,47.2l-4.9-4.9l2.2-2.2l4.9,4.9L88.9,47.2z M114,55h8v3h-8V55z M86,58h-7 v-3h7V58z M101,43h-3v-8h3V43z M98,71h3v8h-3V71z M100.1,67.7c6.3,0,11.5-5.1,11.5-11.5c0-6.3-5.1-11.5-11.5-11.5 c-6.3,0-11.5,5.1-11.5,11.5C88.7,62.6,93.8,67.7,100.1,67.7z M100.1,47.9c4.6,0,8.3,3.7,8.3,8.3s-3.7,8.3-8.3,8.3 c-4.6,0-8.3-3.7-8.3-8.3S95.5,47.9,100.1,47.9z"></path>
+										</svg>
+									</div>
+								</div>
+							</article>
+						</li>
+						<li class="grid-item item-graphic item-format format-social-portrait carousel-child">
+							<article class="container">
+								<div class="display">
+									<div class="format-name">
+										<p><strong>Social</strong> Portrait</p>
+									</div>
+									<div class="format-icon">
+										<svg viewBox="0 0 144 144">
+											<path d="M22,22v120h99V22H22z M50.4,120.6l11-2l14,15.1c0.3,0.3,0.7,0.5,1.1,0.5c0.1,0,0.2,0,0.3,0c0.5-0.1,1-0.4,1.2-0.9l6.7-15.1 l8.9,3.1L107,138H36.2L50.4,120.6z M53.4,116.8L72.1,94l18,22.6l-5.7-1.9c-0.8-0.3-1.6,0.1-1.9,0.8l-6.4,14.3l-13-14 c-0.4-0.4-0.9-0.6-1.4-0.5L53.4,116.8z M117,138h-4l-39-49.1c-0.4-0.6-1.1-0.9-1.8-0.9c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.8,0.9L30.2,138 H26V26h91V138z M78.4,62.3l2.2,2.2l-4.9,4.9l-2.2-2.2L78.4,62.3z M100.9,44.2L98.6,42l4.9-4.9l2.2,2.2L100.9,44.2z M100.9,62.3 l4.9,4.9l-2.2,2.2l-4.9-4.9L100.9,62.3z M78.4,44.2l-4.9-4.9l2.2-2.2l4.9,4.9L78.4,44.2z M103,52h8v3h-8V52z M75,55h-7v-3h7V55z  M90,40h-3v-8h3V40z M87,68h3v8h-3V68z M89.6,64.7c6.3,0,11.5-5.1,11.5-11.5c0-6.3-5.1-11.5-11.5-11.5c-6.3,0-11.5,5.1-11.5,11.5 C78.2,59.6,83.3,64.7,89.6,64.7z M89.6,44.9c4.6,0,8.3,3.7,8.3,8.3s-3.7,8.3-8.3,8.3c-4.6,0-8.3-3.7-8.3-8.3S85,44.9,89.6,44.9z"></path>
+										</svg>
+									</div>
+								</div>
+							</article>
+						</li>
+						<li class="grid-item item-graphic item-format format-social-square carousel-child">
+							<article class="container">
+								<div class="display">
+									<div class="format-name">
+										<p><strong>Social</strong> Square</p>
+									</div>
+									<div class="format-icon">
+										<svg viewBox="0 0 144 144">
+											<path d="M12,20v120h120V20H12z M39.9,118.3l11-2.1l14,15c0.3,0.3,0.7,0.5,1.1,0.5c0.1,0,0.2,0,0.3,0c0.5-0.1,1-0.4,1.2-0.9l6.7-15.1 l8.9,3.3L96.5,136H25.7L39.9,118.3z M42.9,114.3l18.6-22.8l18,22.6l-5.7-1.9c-0.8-0.3-1.6,0.1-1.9,0.8l-6.4,14.3l-13-14 c-0.4-0.4-0.9-0.6-1.4-0.5L42.9,114.3z M128,136h-25.5l-39-49.1C63,86.4,62.3,86,61.6,86c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.8,0.9 L19.7,136H16V24h112V136z M88.9,59.8l2.2,2.2l-4.9,4.9l-2.2-2.2L88.9,59.8z M111.4,41.7l-2.2-2.2l4.9-4.9l2.2,2.2L111.4,41.7z  M111.4,59.8l4.9,4.9l-2.2,2.2l-4.9-4.9L111.4,59.8z M88.9,41.7l-4.9-4.9l2.2-2.2l4.9,4.9L88.9,41.7z M114,50h8v3h-8V50z M86,53h-7 v-3h7V53z M101,38h-3v-8h3V38z M98,66h3v8h-3V66z M100.1,62.2c6.3,0,11.5-5.1,11.5-11.5c0-6.3-5.1-11.5-11.5-11.5 c-6.3,0-11.5,5.1-11.5,11.5C88.7,57.1,93.8,62.2,100.1,62.2z M100.1,42.4c4.6,0,8.3,3.7,8.3,8.3s-3.7,8.3-8.3,8.3 c-4.6,0-8.3-3.7-8.3-8.3S95.5,42.4,100.1,42.4z"></path>
+										</svg>
+									</div>
+								</div>
+							</article>
+						</li>
+						<li class="grid-item item-graphic item-format format-blog-graphic carousel-child">
+							<article class="container">
+								<div class="display">
+									<div class="format-name">
+										<p><strong>Blog</strong> Graphic</p>
+									</div>
+									<div class="format-icon">
+										<svg viewBox="0 0 144 144">
+											<path d="M116.4,12H27.6v120h88.9V12z M112,127.6H32V16.4h80V127.6z M67.2,58.4c-10,0-18.2,9-18.2,18c0,10,8.1,18,18.1,18 s18.2-7.7,18.2-17.7v-0.9H69V58.4H67.2z M82.4,78.7c-0.7,7.4-7.3,12.8-15.1,12.8c-8.4,0-15-6.3-15-14.7c0-7.9,6.5-14.5,13.9-15.3 v17.2H82.4z M94.2,67.9c0-10-8.2-18.5-18.3-18.5h-1v20.4h19.3V67.9z M77.9,66.8v-14c7.4,0.7,12.5,6.6,13.2,14H77.9z M40.9,28.3 c0-0.8,0.7-1.5,1.5-1.5h58.4c0.8,0,1.5,0.7,1.5,1.5c0,0.8-0.7,1.5-1.5,1.5H42.4C41.5,29.8,40.9,29.1,40.9,28.3z M40.9,37.2 c0-0.8,0.7-1.5,1.5-1.5h45.2c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5H42.4C41.5,38.7,40.9,38,40.9,37.2z M40.9,117.2 c0-0.8,0.7-1.5,1.5-1.5h58.4c0.8,0,1.5,0.7,1.5,1.5c0,0.8-0.7,1.5-1.5,1.5H42.4C41.5,118.7,40.9,118,40.9,117.2z M54.1,108.3 c0-0.8,0.7-1.5,1.5-1.5h45.2c0.8,0,1.5,0.7,1.5,1.5c0,0.8-0.7,1.5-1.5,1.5H55.6C54.8,109.8,54.1,109.1,54.1,108.3z"></path>
+										</svg>
+									</div>
+								</div>
+							</article>
+						</li>
+						<li class="grid-item item-graphic item-format format-infographic carousel-child carousel-last">
+							<article class="container">
+								<div class="display">
+									<div class="format-name">
+										<p><strong>Infographic</strong></p>
+									</div>
+									<div class="format-icon">
+										<svg viewBox="0 0 144 144">
+											<path d="M47,122h21V82H47V122z M23,122h20V68H23V122z M72,122h21v-18H72V122z M98,122h20v-9H98V122z M63,22H23v-2h40V22z M63,32H23 v-2h40V32z M63,27H23v-2h40V27z M121,77H82v-2h39V77z M121,82H82v-2h39V82z M93,18h-2.5c-10.9,0-19.8,9.5-19.8,19.3 c0,10.9,8.7,19.5,19.7,19.5S110,48.3,110,37.3V37H93V18z M107,40c-0.8,8-7.9,13.8-16.5,13.8c-9.2,0-16.6-7-16.6-16.2 c0-8.6,7-16,15-16.8V40H107z M100.1,8H99v22h21v-2.2C120,16.9,111,8,100.1,8z M102,27V11.3c8,0.8,13.8,7.7,14.6,15.7H102z"></path>
+										</svg>
+									</div>
+								</div>
+							</article>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="create-wrapper">
+			<div class="create-container">
+				<nav class="navigation-header">
+					<div class="navigation-heading">
+						<div class="close-button icon-ecks-v2"></div>
+						<a class="blank-button" href="#"><span class="icon-new-v2"></span> Create from blank</a>
+						<h3>Select a Report Template to Start</h3>
+					</div>
+				</nav>
+				<div class="category-header first">
+					<p>Typographic Layouts</p>
+				</div>
+				<ul class="create-grid" data-bind="packerySimple">
+					<li class="grid-item item-graphic item-untitled item-template loading packery-child">
+						<article class="container">
+							<div class="display icon-image-v2" style="width:260px;height:336px;">
+								<div class="loader small"></div>
+								<img src="https://cdn.visage.co/assets/temp00-13700417bdb06e21c376349c4e397f21.png" width="1275px" height="1650px">
+							</div>
+						</article>
+					</li>
+					<li class="grid-item item-graphic item-untitled item-template loading packery-child">
+						<article class="container">
+							<div class="display icon-image-v2" style="width:260px;height:336px;">
+								<div class="loader small"></div>
+								<img src="https://cdn.visage.co/assets/temp01-4d961361be66a468bd577d33f4047e4b.png" width="1275px" height="1650px">
+							</div>
+						</article>
+					</li>
+					<li class="grid-item item-graphic item-untitled item-template loading packery-child">
+						<article class="container">
+							<div class="display icon-image-v2" style="width:260px;height:336px;">
+								<div class="loader small"></div>
+								<img src="https://cdn.visage.co/assets/temp02-9996b5f2bdb7750c6b8eb68c16469045.png" width="1275px" height="1650px">
+							</div>
+						</article>
+					</li>
+					<li class="grid-item item-graphic item-untitled item-template loading packery-child">
+						<article class="container">
+							<div class="display icon-image-v2" style="width:260px;height:336px;">
+								<div class="loader small"></div>
+								<img src="https://cdn.visage.co/assets/temp03-9fd1c1af1d1d1b8b7bd5ffd8be977f5b.png" width="1275px" height="1650px">
+							</div>
+						</article>
+					</li>
+					<li class="grid-item item-graphic item-untitled item-template loading packery-child">
+						<article class="container">
+							<div class="display icon-image-v2" style="width:260px;height:336px;">
+								<div class="loader small"></div>
+								<img src="https://cdn.visage.co/assets/temp04-6f016d81a80fff78c26f32cca6816ff1.png" width="1275px" height="1650px">
+							</div>
+						</article>
+					</li>
+					<li class="grid-item item-graphic item-untitled item-template loading packery-child">
+						<article class="container">
+							<div class="display icon-image-v2" style="width:260px;height:336px;">
+								<div class="loader small"></div>
+								<img src="https://cdn.visage.co/assets/temp05-b07f9d86a3b5c2aa19150d328fa1627b.png" width="1275px" height="1650px">
+							</div>
+						</article>
+					</li>
+					<li class="grid-item item-graphic item-untitled item-template loading packery-child">
+						<article class="container">
+							<div class="display icon-image-v2" style="width:260px;height:336px;">
+								<div class="loader small"></div>
+								<img src="https://cdn.visage.co/assets/temp06-72d1b3828bed61db6a7dbe44a08b0764.png" width="1275px" height="1650px">
+							</div>
+						</article>
+					</li>
+					<li class="grid-item item-graphic item-untitled item-template loading packery-child">
+						<article class="container">
+							<div class="display icon-image-v2" style="width:260px;height:336px;">
+								<div class="loader small"></div>
+								<img src="https://cdn.visage.co/assets/temp07-4f1ce4d096379fd39e67f9ad2b13bd5f.png" width="1275px" height="1650px">
+							</div>
+						</article>
+					</li>
+					<li class="grid-item item-graphic item-untitled item-template loading packery-child">
+						<article class="container">
+							<div class="display icon-image-v2" style="width:260px;height:336px;">
+								<div class="loader small"></div>
+								<img src="https://cdn.visage.co/assets/temp08-9f5a0f618c5f7aa05ccfc78ce3de0cfb.png" width="1275px" height="1650px">
+							</div>
+						</article>
+					</li>
+					<li class="grid-item item-graphic item-untitled item-template loading packery-child">
+						<article class="container">
+							<div class="display icon-image-v2" style="width:260px;height:336px;">
+								<div class="loader small"></div>
+								<img src="https://cdn.visage.co/assets/temp09-a555b794f56e3e6db95c3a18933cf772.png" width="1275px" height="1650px">
+							</div>
+						</article>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</div>
+</div>
+
+		</div>
+		<div class="modal-fill gradient"></div>
+		<section class="modal-window modal-login">
+			<div class="wrapper">
+				<div class="container">
+					<div class="content">
+						<header class="modal-title">
+							<h1>Oh, hi there.</h1>
+							<h2>Go ahead and sign in for subscribe our page.</h2>
+						</header>
+						<article>
+							<div class="modal-section">
+								<div class="form" data-bind="disableReturn: !email.isValid() || !current.isValid()">
+									<form class="new_user" id="new_user" action="/auth/signin" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="bmW7ipaOnZFLlW6TpxJWsxdOuIbZ9sCf+9WURZFDRNkJ3hwvznBc+oLDAjhrUHM0gandGATzvzigal8LLYlISw==" />
+									 {% csrf_token %}
+										<div class="input" data-bind="myInputMakesMeHappy">
+											<div class="multi-input" data-bind="myInputMakesMeHappy">
+												<label for="user-email" class="multi-label">Email Address</label>
+												<span class="multi-validation" data-bind="validationMessage: email"></span>
+												<input autofocus="autofocus" placeholder="email@domain.com" id="user-email" name="user[email]" type="email" data-bind="textInput: email" />
+											</div>
+											<div class="multi-input" data-bind="myInputMakesMeHappy">
+												<label for="user-password" class="multi-label">Password</label>
+												<span class="multi-validation" data-bind="validationMessage: current"></span>
+												<input autocomplete="off" placeholder="Password" id="user-password" name="user[password]" type="password" data-bind="textInput: current" />
+											</div>
+										</div>
+										<div class="action">
+											<input name="commit" type="submit" value="Sign in" class="disabled button noticeme" data-bind="css: { disabled: !email.isValid() || !current.isValid() }">
+											<div class="alternate with-checkbox"><a href="/signup">or sign up</a></div>
+											<div class="checkbox">
+												<div class="checkbox-container">
+													<div class="checkbox-actual" data-bind="checkboxValueToggle: { default: 0, active: 1, observable: remember, actual: '#user-remember-me' }">
+														<div class="box">
+															<div class="check"></div>
+														</div>
+														<div class="label"><label>Remember Me</label></div>
+													</div>
+												</div>
+											</div>
+											<input id="user-remember-me" name="user[remember_me]" type="hidden" value="" />
+										</div>
+</form>								</div>
+							</div>
+							<div class="modal-section">
+								<div class="oauth">
+	<p><a class="google-button" href="/users/auth/google_oauth2"><span class="button-text">Sign in with Google</span></a></p>
+</div>
+								<ul class="links">
+	<li><a href="/users/password/new">Forgot your password?</a></li>
+	<li><a href="/users/confirmation/new">Lost your invite email?</a></li>
+	<li><a href="/">Back to Home</a></li>
+</ul>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+<div class="gearbox" id="devise-setup">
+	<div id="resource-email" data-value=""></div>
+	<div id="resource-current" data-value=""></div>
+	<div id="resource-remember" data-value=""></div>
+</div>
+
+
+
+
+	<script src="//cdn.optimizely.com/js/4857171755.js"></script>
+
+	<script src="https://cdn.visage.co/assets/bundles/devise-bundle-a133fb7b34e6217e6012e79561cf3ce6.js"></script>
+
+
+
+</body>
+</html>
