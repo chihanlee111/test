@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from backpakers.models import Account
+from backpakers.models import Account , Message
 from django.http import HttpResponse
 from django.shortcuts import redirect
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 def index(request):
 	return render(request, 'index.html')
@@ -49,6 +50,24 @@ def auth_logout(request):
 	del request.session['email']
 	return redirect('/')
 def addMessage(request):
-	return redirect('/')
+	if request.POST['email']=='' or request.POST['name'] or request.POST['phone'] or request.POST[''] or request.POST['message']=='':
+		return redirect(request.POST['from']+'/')
+	message = Message(sender_name=request.POST['name'], sender_email=request.POST['email'], sender_phone = request.POST['phone'], message_text=request.POST['text'])
+	message.save()
+	return redirect(request.POST['from']+'/')
+
+@csrf_exempt
+def addMessageAjax(request):
+	if request.POST['email']=='' or request.POST['name'] or request.POST['phone'] or request.POST[''] or request.POST['message']=='':
+		return JsonResponse({"status":"error" , "reponseCode":"404"})
+	message = Message(sender_name=request.POST['name'], sender_email=request.POST['email'], sender_phone = request.POST['phone'], message_text=request.POST['message'])
+	message.save()
+	test = {
+	"status" : "success",
+	"reponseCode" : "200"
+	}
+	return JsonResponse(test)
+
+
 
 

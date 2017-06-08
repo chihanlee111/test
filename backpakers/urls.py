@@ -13,4 +13,5 @@ urlpatterns = [
     url(r'^auth_signin/$',views.auth_signin, name='auth_signin'),
     url(r'^auth_signup/$',views.auth_signup, name='auth_signup'),
     url(r'^auth_logout/$',views.auth_logout, name='auth_logout'),
+    url(r'^user_message/$',views.addMessageAjax, name='user_message'),
 ]

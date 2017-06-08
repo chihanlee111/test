@@ -20,7 +20,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "{% url 'backpakers:user_message' %}",
                 type: "POST",
                 data: {
                     name: name,
@@ -70,3 +70,43 @@ $(function() {
 $('#name').focus(function() {
     $('#success').html('');
 });
+
+
+
+
+
+//name: name,
+                    //phone: phone,
+                    //email: email,
+                   // message: message
+
+function sendAjaxMessage(){
+            var xhttp = new XMLHttpRequest();
+            var name = $("input#name").val();
+            var email = $("input#email").val();
+            var phone = $("input#phone").val();
+            var message = $("textarea#message").val();
+            var parm = "name="+name+"&phone="+phone+"&email="+email+"&message="+message
+            xhttp.open("POST", "action.php", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send(parm);
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    $('#success').html("<div class='alert alert-success alert-dismissable fade show'>");
+                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                    $('#success > .alert-success')
+                        .append("Your message has been sent.");
+                    $('#success > .alert-success')
+                        .append('</div>');
+
+                    //clear all fields
+                    $('#contactForm').trigger("reset");
+                }
+            };
+}
+
+
+
+
+

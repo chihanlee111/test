@@ -1,6 +1,13 @@
 from django.db import models
 
 # Create your models here.
+class Message(models.Model):
+	sender_name = models.CharField(max_length=200)
+	sender_email = models.CharField(max_length=200)
+	sender_phone = models.CharField(max_length=200)
+	message_text = models.CharField(max_length=500)
+	def __str__(self):
+		return self.sender_name
 class Account(models.Model):
 	account_email = models.CharField(max_length=200)
 	account_firstName = models.CharField(max_length=200)
