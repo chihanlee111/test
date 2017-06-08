@@ -30,6 +30,7 @@
 <!-- This site is optimized with the Yoast SEO plugin v4.7 - https://yoast.com/wordpress/plugins/seo/ -->
 <title>Backpackers.co - Travel Become Simple</title>
 <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/visage.co\/","name":"Visage","potentialAction":{"@type":"SearchAction","target":"https:\/\/visage.co\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- / Yoast SEO plugin. -->
 <script type="text/javascript">
 	window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/visage.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.5"}};
@@ -73,8 +74,14 @@
 <header class="main-header clearfix">
     <nav>
 	    <ul class="button-group small-only-text-center">
-	    	<li><a data-ga-cat="Marketing Product" data-ga-event="Clicked" data-ga-label="Clicked Login Button in Header" href="signin" class="button button-text">Sign in</a></li>
+	    {% if 'email' in request.session %}
+	    <form action="{% url 'backpakers:auth_logout' %}" method="post" id="logout">{% csrf_token %}</form>
+	    	<li><a data-ga-cat="Marketing Product" data-ga-event="Clicked" data-ga-label="Clicked Login Button in Header" class="button button-text" href="javascript:$('#logout').submit();">Logout</a></li>
+	    {% else %}
+	    	<li><a data-ga-cat="Marketing Product" data-ga-event="Clicked" data-ga-label="Clicked Login Button in Header" href="/signin" class="button button-text">Sign in</a></li>
+	    {% endif %}
 			<li><a data-ga-cat="Marketing" data-ga-event="Clicked" data-ga-label="Clicked Menu Button in Header" href="#sidebar" class="button menu-button"><span class="menu-icon"></span>Menu</a></li>
+	    }
 	    </ul>
     </nav>
 </header>

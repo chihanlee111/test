@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="utf-8">
@@ -322,18 +323,19 @@
 						<article>
 							<div class="modal-section">
 								<div class="form" data-bind="disableReturn: !email.isValid() || !current.isValid()">
-									<form class="new_user" id="new_user" action="/auth/signin" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="bmW7ipaOnZFLlW6TpxJWsxdOuIbZ9sCf+9WURZFDRNkJ3hwvznBc+oLDAjhrUHM0gandGATzvzigal8LLYlISw==" />
+									<form class="new_user" id="new_user" action="{% url 'backpakers:auth_signin' %}" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="bmW7ipaOnZFLlW6TpxJWsxdOuIbZ9sCf+9WURZFDRNkJ3hwvznBc+oLDAjhrUHM0gandGATzvzigal8LLYlISw==" />
 									 {% csrf_token %}
+									 <p>{{alert}}</p>
 										<div class="input" data-bind="myInputMakesMeHappy">
 											<div class="multi-input" data-bind="myInputMakesMeHappy">
 												<label for="user-email" class="multi-label">Email Address</label>
 												<span class="multi-validation" data-bind="validationMessage: email"></span>
-												<input autofocus="autofocus" placeholder="email@domain.com" id="user-email" name="user[email]" type="email" data-bind="textInput: email" />
+												<input autofocus="autofocus" placeholder="email@domain.com" id="user-email" name="email" type="email" data-bind="textInput: email" />
 											</div>
 											<div class="multi-input" data-bind="myInputMakesMeHappy">
 												<label for="user-password" class="multi-label">Password</label>
 												<span class="multi-validation" data-bind="validationMessage: current"></span>
-												<input autocomplete="off" placeholder="Password" id="user-password" name="user[password]" type="password" data-bind="textInput: current" />
+												<input autocomplete="off" placeholder="Password" id="user-password" name="password" type="password" data-bind="textInput: current" />
 											</div>
 										</div>
 										<div class="action">

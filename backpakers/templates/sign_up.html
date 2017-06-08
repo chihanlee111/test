@@ -647,9 +647,9 @@
                             <article>
                                 <div class="modal-section">
                                     <div class="form" data-bind="disableReturn: !email.isValid() || !firstName.isValid() || !lastName.isValid() || !pass.isValid()">
-                                        <form class="new_user" id="new_user" action="/auth/signup" accept-charset="UTF-8" method="post">
+                                        <form class="new_user" id="new_user" action="{% url 'backpakers:auth_signup' %}" accept-charset="UTF-8" method="post">
                                         {% csrf_token %}
-                                        {{ form.as_p }}
+                                        <p>{{alert}}</p>
                                             <input name="utf8" type="hidden" value="&#x2713;" />
                                             <div class="input" data-bind="myInputMakesMeHappy">
                                                 <div class="multi-input" data-bind="myInputMakesMeHappy">
