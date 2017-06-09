@@ -40,6 +40,7 @@
 	
 </head>
 <body data-controller="sessions" data-action="new" class="sessions-new">
+<script type="text/javascript">if("{{pop}}" != ''){alert("{{pop}}");}</script>
 	
 <section id="header" class="loading" data-bind="css: { loading: false }">
 	<a class="logo icon-visage" href="/"></a>
@@ -317,13 +318,13 @@
 				<div class="container">
 					<div class="content">
 						<header class="modal-title">
-							<h1>Oh, hi there.</h1>
-							<h2>Go ahead and sign in for subscribe our page.</h2>
+							<h1>Hi</h1>
+							<h2>Enter the email you register.</h2>
 						</header>
 						<article>
 							<div class="modal-section">
 								<div class="form" data-bind="disableReturn: !email.isValid() || !current.isValid()">
-									<form class="new_user" id="new_user" action="{% url 'backpakers:auth_signin' %}" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="bmW7ipaOnZFLlW6TpxJWsxdOuIbZ9sCf+9WURZFDRNkJ3hwvznBc+oLDAjhrUHM0gandGATzvzigal8LLYlISw==" />
+									<form class="new_user" id="new_user" action="{% url 'backpakers:forget_passwd' %}" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="bmW7ipaOnZFLlW6TpxJWsxdOuIbZ9sCf+9WURZFDRNkJ3hwvznBc+oLDAjhrUHM0gandGATzvzigal8LLYlISw==" />
 									 {% csrf_token %}
 									 <p style="color:#F781F3;">{{alert}}</p>
 										<div class="input" data-bind="myInputMakesMeHappy">
@@ -332,36 +333,17 @@
 												<span class="multi-validation" data-bind="validationMessage: email"></span>
 												<input autofocus="autofocus" placeholder="email@domain.com" id="user-email" name="email" type="email" data-bind="textInput: email" />
 											</div>
-											<div class="multi-input" data-bind="myInputMakesMeHappy">
-												<label for="user-password" class="multi-label">Password</label>
-												<span class="multi-validation" data-bind="validationMessage: current"></span>
-												<input autocomplete="off" placeholder="Password" id="user-password" name="password" type="password" data-bind="textInput: current" />
-											</div>
 										</div>
 										<div class="action">
-											<input name="commit" type="submit" value="Sign in" class="disabled button noticeme" data-bind="css: { disabled: !email.isValid() || !current.isValid() }">
-											<div class="alternate with-checkbox"><a href="/signup">or sign up</a></div>
-											<div class="checkbox">
-												<div class="checkbox-container">
-													<div class="checkbox-actual" data-bind="checkboxValueToggle: { default: 0, active: 1, observable: remember, actual: '#user-remember-me' }">
-														<div class="box">
-															<div class="check"></div>
-														</div>
-														<div class="label"><label>Remember Me</label></div>
-													</div>
-												</div>
-											</div>
-											<input id="user-remember-me" name="user[remember_me]" type="hidden" value="" />
+											<input name="commit" type="submit" value="Resend certification" class="disabled button noticeme" data-bind="css: { disabled: !email.isValid()}">
 										</div>
 </form>								</div>
 							</div>
 							<div class="modal-section">
-								<div class="oauth">
-	<p><a class="google-button" href="/users/auth/google_oauth2"><span class="button-text">Sign in with Google</span></a></p>
-</div>
+								
 								<ul class="links">
 	<li><a href="/forget_passwd">Forgot your password?</a></li>
-	<li><a href="/email_cert">Lost your invite email?</a></li>
+	<li><a href="/email_resend">Lost your invite email?</a></li>
 	<li><a href="/">Back to Home</a></li>
 </ul>
 							</div>

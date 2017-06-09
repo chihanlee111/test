@@ -26,6 +26,11 @@ SECRET_KEY = 'qa+l1l_iiit95fll$54)8_h#8jkejap_a(m$dpuh8n&i9k5ec5'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'backpaker02@gmail.com'
+EMAIL_HOST_PASSWORD = 'yaugvuofuudmvwrh'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 
 # Application definition
@@ -100,7 +105,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+PASSWORD_HASHERS = (
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.BCryptPasswordHasher',
+    'django.contrib.auth.hashers.SHA1PasswordHasher',
+    'django.contrib.auth.hashers.MD5PasswordHasher',
+    'django.contrib.auth.hashers.CryptPasswordHasher'
+)
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 
