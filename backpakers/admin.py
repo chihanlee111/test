@@ -8,5 +8,5 @@ class AccountAdmin(admin.ModelAdmin):
 
 @admin.register(Message)
 class MessageAdmin(admin.ModelAdmin):
-	list_display = ('sender_name' , 'sender_email' , 'sender_phone' , 'message_text')
+	list_display = ('sender_name' , 'sender_email' , 'sender_phone' , 'message_text' , 'send_time')
 

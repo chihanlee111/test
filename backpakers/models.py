@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 # Create your models here.
 class Message(models.Model):
@@ -6,6 +7,7 @@ class Message(models.Model):
 	sender_email = models.CharField(max_length=200)
 	sender_phone = models.CharField(max_length=200)
 	message_text = models.CharField(max_length=500)
+	send_time = models.DateTimeField(auto_now=True)
 	def __str__(self):
 		return "From  " +self.sender_email
 class Account(models.Model):
